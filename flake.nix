@@ -16,15 +16,20 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."axel-soderlind" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+      homeConfigurations = {
+        "axel-soderlind@ubuntu-work" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+            ./hosts/ubuntu-work.nix
+          ];
+        };
+        "axel-soderlind@nixvm-work" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+            ./hosts/nixvm-work.nix
+          ];
       };
     };
 }
