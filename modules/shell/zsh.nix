@@ -31,7 +31,7 @@
       gcb = "git checkout -b";
       gcm = "git checkout master && git pull";
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --flake ~/repos/nixos-config";
       copy-to-clipboard = "xclip -selection clipboard";
     };
     zplug = {
