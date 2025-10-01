@@ -6,6 +6,7 @@
 
   imports = [
     ./programs/git.nix
+    ./programs/tmux.nix
   ];
 
   home.stateVersion = "25.05"; # Please read the comment before changing.

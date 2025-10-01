@@ -5,8 +5,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "asoderlind";
-    userEmail = "axesode@gmail.com";
+    userName = "Axel Söderlind";
+    userEmail = "axel.soderlind@rollingoptics.com";
     extraConfig = {
       init.defaultBranch = "master";
       color.ui = true;
