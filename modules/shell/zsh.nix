@@ -25,12 +25,14 @@
       gc = "git commit -v";
       gd = "git diff";
       gl = "git log";
+      gitlog = "git log --all --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset :%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset' --abbrev-commit";
       gp = "git push";
       gs = "git status";
       gu = "git pull";
       gcb = "git checkout -b";
       gcm = "git checkout master && git pull";
-      ll = "ls -l";
+      ll = "ls -lh";
+      lz = "ps axo pid=,stat= | awk '\$2~/^Z/ { print \$1 }'";
       update = "sudo nixos-rebuild switch --flake ~/repos/nixos-config";
       copy-to-clipboard = "xclip -selection clipboard";
     };

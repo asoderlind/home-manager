@@ -41,9 +41,7 @@
     ./modules/git.nix
     ./modules/shell/zsh.nix
     ./modules/editor/vim.nix
-    ./modules/yabai.nix
-    ./modules/skhd.nix
-    ./modules/ghostty.nix
+    ./modules/terminal/kitty.nix
   ];
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
