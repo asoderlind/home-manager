@@ -43,9 +43,6 @@
     ./modules/editor/vim.nix
   ];
 
-  home.username = "axel-soderlind";
-  home.homeDirectory = "/home/axel-soderlind";
-
   home.stateVersion = "25.05"; # Please read the comment before changing.
   programs.home-manager.enable = true;
 

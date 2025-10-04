@@ -9,27 +9,30 @@
     };
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations = {
-        "axel-soderlind@ubuntu-work" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/ubuntu-work.nix
-          ];
-        };
-        "axel-soderlind@nixvm-work" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/nixvm-work.nix
-          ];
+  outputs = { nixpkgs, home-manager, ... }: {
+    homeConfigurations = {
+      "axel@mac-home" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."aarch64-darwin"; # or "x86_64-darwin" for Intel
+        modules = [
+          ./home.nix
+          ./hosts/mac-home.nix
+        ];
+      };
+
+      "axel-soderlind@ubuntu-work" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [
+          ./home.nix
+          ./hosts/ubuntu-work.nix
+        ];
+      };
+
+      "axel-soderlind@nixvm-work" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [
+          ./home.nix
+          ./hosts/nixvm-work.nix
+        ];
       };
     };
   };
