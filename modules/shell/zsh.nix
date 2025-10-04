@@ -63,16 +63,6 @@
       	    zstyle ':completion:*' menu select
 
       	    # lf directory switch function
-      	    lfcd () {
-      	      tmp="$(mktemp)"
-      	      lf -last-dir-path="$tmp" "$@"
-      	      if [ -f "$tmp" ]; then
-      		dir="$(cat "$tmp")"
-      		rm -f "$tmp"
-      		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-      	      fi
-      	    }
-      	    bindkey -s '^o' 'lfcd\n'
       	    bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
       	    # Run ls after cd
@@ -91,6 +81,20 @@
       	    # ghcup
       	    [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env"
       	  '';
+    profileExtra = ''
+      					export XDG_DATA_DIRS=$HOME/.nix-profile/share:/usr/local/share:/usr/share
+
+      					[ -f "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+      					export PATH=$PATH:$HOME/.local/bin
+
+      					export EDITOR="nvim"
+      					export VISUAL="nvim"
+      					alias vim=nvim
+
+      					export FZF_DEFAULT_COMMAND='rg --files --hidden'
+      					export FZF_DEFAULT_OPTS='--color=16'
+      				  '';
 
   };
 }

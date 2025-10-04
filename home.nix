@@ -41,10 +41,14 @@
     ./modules/git.nix
     ./modules/shell/zsh.nix
     ./modules/editor/vim.nix
+    ./modules/yabai.nix
+    ./modules/skhd.nix
+    ./modules/ghostty.nix
   ];
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
   programs.home-manager.enable = true;
+  news.display = "silent";
 
   fonts.fontconfig.enable = true;
 
