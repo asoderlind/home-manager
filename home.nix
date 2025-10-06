@@ -38,7 +38,6 @@
   # Import modules
   imports = [
     ./modules/tmux.nix
-    ./modules/git.nix
     ./modules/shell/zsh.nix
     ./modules/editor/vim.nix
     ./modules/terminal/kitty.nix
