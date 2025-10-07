@@ -13,18 +13,11 @@
     neofetch
     bat
 
-    # JS
-    nodejs
-
     # Git
     difftastic
 
-    # Python
-    python313
-
     # Fonts
     jetbrains-mono
-    #nerd-fonts.jetbrains-mono
 
     # Networking
     nmap
