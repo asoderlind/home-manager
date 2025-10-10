@@ -5,6 +5,8 @@
 
   # Import modules specific to this machine
   imports = [
-    (import ../modules/git.nix { inherit pkgs; userEmail = "axesode@gmail.com"; })
+    (import ../../modules/wm)
+    (import ../../modules/browser/firefox.nix)
+    (import ../../modules/git.nix { inherit pkgs; userEmail = "axesode@gmail.com"; })
   ];
 }

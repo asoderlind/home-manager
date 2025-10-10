@@ -5,6 +5,6 @@
 
   # Import modules specific to this machine
   imports = [
-    (import ../modules/git.nix { inherit pkgs; userEmail = "axel.soderlind@rollingoptics.com"; })
+    (import ../../modules/git.nix { inherit pkgs; userEmail = "axel.soderlind@rollingoptics.com"; })
   ];
 }
