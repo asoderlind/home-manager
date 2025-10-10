@@ -4,6 +4,7 @@
     ./binds.nix
     ./hyprland.nix
     ./pyprland.nix
+    ./hypridle.nix
   ];
 }
 
