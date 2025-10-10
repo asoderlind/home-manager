@@ -42,6 +42,8 @@
     ./modules/shell/zsh.nix
     ./modules/editor/vim.nix
     ./modules/terminal/kitty.nix
+    ./modules/browser/firefox.nix
+    ./modules/wm
   ];
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
