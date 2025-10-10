@@ -21,7 +21,7 @@
           pkgs = nixpkgs.legacyPackages."aarch64-darwin"; # or "x86_64-darwin" for Intel
           modules = [
             ./home.nix
-            ./hosts/mac-home.nix
+            ./hosts/mac-home
           ];
         };
 
@@ -29,7 +29,7 @@
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             ./home.nix
-            ./hosts/ubuntu-work.nix
+            ./hosts/ubuntu-work
           ];
         };
 
@@ -37,7 +37,7 @@
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             ./home.nix
-            ./hosts/nixvm-work.nix
+            ./hosts/nixvm-work
           ];
         };
 
