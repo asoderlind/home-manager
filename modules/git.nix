@@ -1,12 +1,9 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, userEmail ? "axesode@gmail.com", ... }:
 {
   programs.git = {
     enable = true;
     userName = "asoderlind";
-    userEmail = "axesode@gmail.com";
+    userEmail = userEmail;
     extraConfig = {
       github.user = "asoderlind";
       push.autoSetupRemote = true;
