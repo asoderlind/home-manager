@@ -52,7 +52,7 @@
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [
             ./home.nix
-            ./hosts/hetzner-vm.nix
+            ./hosts/hetzner-vm
           ];
       };
     };
