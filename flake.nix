@@ -44,6 +44,12 @@
             ./hosts/nixos-home.nix
           ];
         };
+        "eugene@hetzner-vm" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          modules = [
+            ./home.nix
+            ./hosts/hetzner-vm.nix
+          ];
       };
     };
 }
