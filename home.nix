@@ -13,18 +13,11 @@
     neofetch
     bat
 
-    # JS
-    nodejs
-
     # Git
     difftastic
 
-    # Python
-    python313
-
     # Fonts
     jetbrains-mono
-    #nerd-fonts.jetbrains-mono
 
     # Networking
     nmap
@@ -38,7 +31,6 @@
   # Import modules
   imports = [
     ./modules/tmux.nix
-    ./modules/git.nix
     ./modules/shell/zsh.nix
     ./modules/editor/vim.nix
     ./modules/terminal/kitty.nix
