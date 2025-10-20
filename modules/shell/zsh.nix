@@ -40,6 +40,7 @@
       gcm = "git checkout master && git pull";
       ll = "ls -lh";
       lz = "ps axo pid=,stat= | awk '\$2~/^Z/ { print \$1 }'";
+      kubectl = "minikube kubectl --";
       update = "sudo nixos-rebuild switch --flake ~/repos/nixos-config";
       copy-to-clipboard = "xclip -selection clipboard";
     };
