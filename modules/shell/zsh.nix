@@ -6,6 +6,13 @@
   programs.fzf.enable = true;
   programs.fzf.defaultOptions = [ "--color=16" ];
 
+  # Enable direnv for automatic environment loading
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   # Enable zsh
   programs.zsh = {
     enable = true;
